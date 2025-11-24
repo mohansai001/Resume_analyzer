@@ -51,7 +51,7 @@ const config = {
     clientId: process.env.MSAL_CLIENT_ID || 'your-msal-client-id',
     clientSecret: process.env.MSAL_CLIENT_SECRET || 'your-msal-client-secret',
     tenantId: process.env.MSAL_TENANT_ID || 'your-msal-tenant-id',
-    redirectUri: process.env.MSAL_REDIRECT_URI || 'http://localhost:3000/auth/callback',
+    redirectUri: process.env.MSAL_REDIRECT_URI || 'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/auth/callback',
   },
 
   // Logging Configuration
@@ -61,7 +61,7 @@ const config = {
 
   // CORS Configuration
   cors: {
-    origin: process.env.CORS_ORIGIN || ['http://localhost:3000', 'https://tagaifrontend-caa2hfb2dfhjfrg8.canadacentral-01.azurewebsites.net'],
+    origin: process.env.CORS_ORIGIN || ['https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net', 'https://tagaifrontend-caa2hfb2dfhjfrg8.canadacentral-01.azurewebsites.net'],
     credentials: process.env.CORS_CREDENTIALS === 'true',
   },
 
