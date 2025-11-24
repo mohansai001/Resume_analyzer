@@ -100,10 +100,10 @@ function AppRecruit() {
   const fetchRrfIds = async () => {
     try {
       console.log(
-        'Fetching RRF IDs from http://localhost:3001/api/rrf-ids'
+        'Fetching RRF IDs from https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/rrf-ids'
       );
       const response = await fetch(
-        'http://localhost:3001/api/rrf-ids'
+        'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/rrf-ids'
       );
       console.log('Response status:', response.status);
 
@@ -135,7 +135,7 @@ function AppRecruit() {
 
   const sendCandidateInfoToDB = (candidateDetails) => {
     fetch(
-      'http://localhost:3001/api/add-candidate-info',
+      'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/add-candidate-info',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

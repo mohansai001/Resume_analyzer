@@ -12,7 +12,7 @@ function TestAPI() {
   const fetchCandidates = async () => {
     try {
       console.log('Fetching candidates...');
-      const response = await fetch('http://localhost:3001/api/get/candidate-info');
+      const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get/candidate-info');
       const data = await response.json();
       console.log('API Response:', data);
       

@@ -71,7 +71,7 @@ const AppL2Technical = () => {
   const loadCandidateData = async (candidateEmail, position) => {
     try {
       const candidateResponse = await fetch(
-        `http://localhost:3001/api/getCandidateData?candidateEmail=${encodeURIComponent(
+        `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/getCandidateData?candidateEmail=${encodeURIComponent(
           candidateEmail
         )}`
       );
@@ -111,42 +111,42 @@ const AppL2Technical = () => {
   const loadQuestions = async (position, candidateId) => {
     const positionToApiMap = {
       'Junior .Net Cloud Native Application Engineer - Backend':
-        ' http://localhost:3001/api/dotnet_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_feedback-questions',
       'Senior .Net Cloud Native Application Engineer - Backend':
-        ' http://localhost:3001/api/dotnet_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_feedback-questions',
       'Junior Java Cloud Native Application Engineer - Backend':
-        ' http://localhost:3001/api/java_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_feedback-questions',
       'Senior Java Cloud Native Application Engineer - Backend':
-        ' http://localhost:3001/api/java_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_feedback-questions',
       'Junior Angular Cloud Native Application Engineer - Frontend':
-        ' http://localhost:3001/api/angular_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/angular_feedback-questions',
       'Senior Angular Cloud Native Application Engineer - Frontend':
-        ' http://localhost:3001/api/angular_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/angular_feedback-questions',
       'Junior React Cloud Native Application Engineer - Frontend':
-        ' http://localhost:3001/api/react_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/react_feedback-questions',
       'Senior React Cloud Native Application Engineer - Frontend':
-        ' http://localhost:3001/api/react_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/react_feedback-questions',
       'Junior Java Angular Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/java_angular_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_angular_fullstack_feedback-questions',
       'Senior Java Angular Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/java_angular_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_angular_fullstack_feedback-questions',
       'Junior Java React Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/java_react_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_react_fullstack_feedback-questions',
       'Senior Java React Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/java_react_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_react_fullstack_feedback-questions',
       'Junior .Net Angular Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/dotnet_angular_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_angular_fullstack_feedback-questions',
       'Senior .Net Angular Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/dotnet_angular_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_angular_fullstack_feedback-questions',
       'Junior .Net React Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/dotnet_react_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_react_fullstack_feedback-questions',
       'Senior .Net React Cloud Native Application Engineer - Full Stack':
-        ' http://localhost:3001/api/dotnet_react_fullstack_feedback-questions',
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_react_fullstack_feedback-questions',
     };
 
     const questionsApi =
       positionToApiMap[position] ||
-      ' http://localhost:3001/api/app_generic_feedback-questions';
+      ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/app_generic_feedback-questions';
 
     try {
       const questionsResponse = await fetch(questionsApi);
@@ -166,7 +166,7 @@ const AppL2Technical = () => {
     try {
       const response = await fetch(
         // displays existing feedback for the candidate if available
-        `http://localhost:3001/api/get-feedback/${candidateId}/${position}`
+        `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-feedback/${candidateId}/${position}`
       );
       if (!response.ok) throw new Error('Failed to fetch existing feedback.');
 
@@ -396,42 +396,42 @@ After the summary, provide:
       // Submit feedback
       const positionToSubmitApi = {
         'Junior .Net Cloud Native Application Engineer - Backend':
-          ' http://localhost:3001/api/dotnet_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_submit-feedback',
         'Senior .Net Cloud Native Application Engineer - Backend':
-          ' http://localhost:3001/api/dotnet_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_submit-feedback',
         'Junior Java Cloud Native Application Engineer - Backend':
-          ' http://localhost:3001/api/java_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_submit-feedback',
         'Senior Java Cloud Native Application Engineer - Backend':
-          ' http://localhost:3001/api/java_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_submit-feedback',
         'Junior Angular Cloud Native Application Engineer - Frontend':
-          ' http://localhost:3001/api/angular_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/angular_submit-feedback',
         'Senior Angular Cloud Native Application Engineer - Frontend':
-          ' http://localhost:3001/api/angular_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/angular_submit-feedback',
         'Junior React Cloud Native Application Engineer - Frontend':
-          ' http://localhost:3001/api/react_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/react_submit-feedback',
         'Senior React Cloud Native Application Engineer - Frontend':
-          ' http://localhost:3001/api/react_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/react_submit-feedback',
         'Junior Java Angular Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/java_angular_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_angular_fullstack_submit-feedback',
         'Senior Java Angular Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/java_angular_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_angular_fullstack_submit-feedback',
         'Junior Java React Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/java_react_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_react_fullstack_submit-feedback',
         'Senior Java React Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/java_react_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_react_fullstack_submit-feedback',
         'Junior .Net Angular Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/dotnet_angular_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_angular_fullstack_submit-feedback',
         'Senior .Net Angular Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/dotnet_angular_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_angular_fullstack_submit-feedback',
         'Junior .Net React Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/dotnet_react_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_react_fullstack_submit-feedback',
         'Senior .Net React Cloud Native Application Engineer - Full Stack':
-          ' http://localhost:3001/api/dotnet_react_fullstack_submit-feedback',
+          ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_react_fullstack_submit-feedback',
       };
 
       const submitApi =
         positionToSubmitApi[formData.position] ||
-        ' http://localhost:3001/api/app_generic_submit-feedback';
+        ' https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/app_generic_submit-feedback';
 
       const response = await fetch(submitApi, {
         method: 'POST',

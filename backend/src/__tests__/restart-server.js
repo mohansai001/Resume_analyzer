@@ -68,7 +68,7 @@ killProcess.on('close', () => {
 
 async function testRoutes() {
   try {
-    const response = await fetch('http://localhost:3001/api/candidates/test');
+    const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/candidates/test');
     const data = await response.json();
     console.log('✅ Candidates test route working:', data);
   } catch (error) {
@@ -76,7 +76,7 @@ async function testRoutes() {
   }
   
   try {
-    const response = await fetch('http://localhost:3001/api/panel/test');
+    const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/panel/test');
     const data = await response.json();
     console.log('✅ Panel test route working:', data);
   } catch (error) {

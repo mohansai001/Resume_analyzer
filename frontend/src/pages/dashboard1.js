@@ -27,7 +27,7 @@ const Dashboard1 = () => {
       setInviteCount(shortlistedData.inviteCount);
       
       // Fetch RRF Tracking data (all candidates)
-      const candidatesRes = await fetch("http://localhost:3001/api/get-shortlisted-candidates");
+      const candidatesRes = await fetch("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-shortlisted-candidates");
       const response = await candidatesRes.json();
       
       if (response.candidates && Array.isArray(response.candidates)) {

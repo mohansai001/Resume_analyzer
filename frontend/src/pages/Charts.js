@@ -28,7 +28,7 @@ const Charts = () => {
 
   useEffect(() => {
     // Fetch weekly data
-    fetch('http://localhost:3001/api/candidates/weekly-counts')
+    fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/candidates/weekly-counts')
       .then(response => response.json())
       .then(data => {
         if (data.success) {
@@ -38,7 +38,7 @@ const Charts = () => {
       .catch(error => console.error('Error fetching weekly data:', error));
 
     // Fetch status data
-    fetch('http://localhost:3001/api/candidates/resume-counts')
+    fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/candidates/resume-counts')
       .then(response => response.json())
       .then(data => {
         if (data.success) {

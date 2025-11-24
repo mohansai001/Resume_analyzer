@@ -1,7 +1,7 @@
 const fetch = require('node:fetch');
 
 async function testPanelRoutes() {
-  const baseUrl = 'http://localhost:3001';
+  const baseUrl = 'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net';
   
   console.log('🧪 Testing Panel Routes...\n');
   

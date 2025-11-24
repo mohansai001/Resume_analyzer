@@ -9,7 +9,7 @@ const CurrentDateFetcher = () => {
     setMessage('');
     
     try {
-      const response = await fetch('http://localhost:3001/api/fetch-current-date', {
+      const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/fetch-current-date', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -105,7 +105,7 @@ const ImochaPage = () => {
       return;
     }
 
-    const targetUrl = `http://localhost:3001/api/invite-candidate`;
+    const targetUrl = `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/invite-candidate`;
   
     const requestData = {
       email: candidate_email,
@@ -166,7 +166,7 @@ const ImochaPage = () => {
 
       const recruitmentPhase = "No iMocha Exam";
       
-      const response = await fetch('http://localhost:3001/api/update-candidate-recruitment-phase', {
+      const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/update-candidate-recruitment-phase', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -207,7 +207,7 @@ const ImochaPage = () => {
     }));
 
     try {
-      const response = await fetch("http://localhost:3001/api/saveRounds", {
+      const response = await fetch("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/saveRounds", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -228,7 +228,7 @@ const ImochaPage = () => {
 
   const fetchRoundsFromDB = async (rrfId) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/getRounds?rrf_id=${rrfId}`);
+      const response = await fetch(`https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/getRounds?rrf_id=${rrfId}`);
       const data = await response.json();
       
       if (data.success && data.rounds.length > 0) {

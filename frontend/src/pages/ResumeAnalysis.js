@@ -350,7 +350,7 @@ function ResumeAnalysis() {
 
       try {
         const initialRes = await fetch(
-          'http://localhost:3001/api/get/candidate-info',
+          'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get/candidate-info',
           { signal }
         );
         const initialData = await initialRes.json();
@@ -427,7 +427,7 @@ function ResumeAnalysis() {
             console.log('Additional skills in POST data:', candidateDetails.additional_skills);
 
             const saveRes = await fetch(
-              'http://localhost:3001/api/add-candidate-info',
+              'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/add-candidate-info',
               {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -542,7 +542,7 @@ function ResumeAnalysis() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:3001/api/get/candidate-evaluation/${candidateId}`
+        `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get/candidate-evaluation/${candidateId}`
       );
       const result = await response.json();
       if (result.success) {

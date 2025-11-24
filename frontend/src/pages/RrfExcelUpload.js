@@ -74,7 +74,7 @@ const RrfExcelUpload = () => {
           return;
         }
 
-        const response = await fetch('http://localhost:3001/api/upload-rrf-excel', {
+        const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/upload-rrf-excel', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ rrfIds }),

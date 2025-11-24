@@ -1,6 +1,6 @@
 // Using built-in fetch (available in Node.js 18+)
 
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = 'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api';
 
 async function testCandidatesAPI() {
   console.log('🧪 Testing Candidates API endpoints...\n');

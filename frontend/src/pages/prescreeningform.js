@@ -60,7 +60,7 @@ const PrescreeningForm = () => {
   
     // Fetch all candidate emails from the server (optional)
     
-    fetch("http://localhost:3001/api/getAllCandidateEmails")
+    fetch("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/getAllCandidateEmails")
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
@@ -77,21 +77,21 @@ const PrescreeningForm = () => {
       });
   
     // Load questions for all sections
-    loadQuestions("http://localhost:3001/api/java_ec_questions", "java-table-body", "java_experience_");
-    loadQuestions("http://localhost:3001/api/dotnet_ec_questions", "dotnet-table-body", "dotnet_experience_");
-    loadQuestions("http://localhost:3001/api/react_ec_questions", "react-table-body", "react_experience_");
-    loadQuestions("http://localhost:3001/api/angular_ec_questions", "angular-table-body", "angular_experience_");
-    loadQuestions("http://localhost:3001/api/mendix_ec_questions", "mendix-table-body", "mendix_experience_");
-    loadQuestions("http://localhost:3001/api/devops_ec_questions", "devops-table-body", "devops_experience_");
-    loadQuestions("http://localhost:3001/api/cloudops_ec_questions", "cloudops-table-body", "cloudops_experience_");
-    loadQuestions("http://localhost:3001/api/platform_ec_questions", "platform-table-body", "platform_experience_");
-    loadQuestions("http://localhost:3001/api/sre_ec_questions", "sre-table-body", "sre_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_ec_questions", "java-table-body", "java_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_ec_questions", "dotnet-table-body", "dotnet_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/react_ec_questions", "react-table-body", "react_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/angular_ec_questions", "angular-table-body", "angular_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/mendix_ec_questions", "mendix-table-body", "mendix_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/devops_ec_questions", "devops-table-body", "devops_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/cloudops_ec_questions", "cloudops-table-body", "cloudops_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/platform_ec_questions", "platform-table-body", "platform_experience_");
+    loadQuestions("https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/sre_ec_questions", "sre-table-body", "sre_experience_");
   
   }, []);
   
 
   const fetchCandidateData = (email) => {
-    fetch(`http://localhost:3001/api/getCandidateData?candidateEmail=${email}`)
+    fetch(`https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/getCandidateData?candidateEmail=${email}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
@@ -246,53 +246,53 @@ if (isAppEC) {
       selectedRole.toLowerCase().includes("angular")
     ) {
       tableSelector = "#fullstack-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/java_angular_fullstack_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_angular_fullstack_submit-feedback";
     } else if (
       selectedRole.toLowerCase().includes("java") &&
       selectedRole.toLowerCase().includes("react")
     ) {
       tableSelector = "#fullstack-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/java_react_fullstack_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_react_fullstack_submit-feedback";
     } else if (
       selectedRole.toLowerCase().includes(".net") &&
       selectedRole.toLowerCase().includes("angular")
     ) {
       tableSelector = "#fullstack-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/dotnet_angular_fullstack_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_angular_fullstack_submit-feedback";
     } else if (
       selectedRole.toLowerCase().includes(".net") &&
       selectedRole.toLowerCase().includes("react")
     ) {
       tableSelector = "#fullstack-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/dotnet_react_fullstack_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_react_fullstack_submit-feedback";
 
       // App EC roles
     } else if (selectedRole.toLowerCase().includes("java")) {
       tableSelector = "#java-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/java_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/java_ec_submit-feedback";
     } else if (selectedRole.toLowerCase().includes(".net")) {
       tableSelector = "#dotnet-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/dotnet_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/dotnet_ec_submit-feedback";
     } else if (selectedRole.toLowerCase().includes("react")) {
       tableSelector = "#react-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/react_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/react_ec_submit-feedback";
     } else if (selectedRole.toLowerCase().includes("angular")) {
       tableSelector = "#angular-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/angular_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/angular_ec_submit-feedback";
     } else if (selectedRole.toLowerCase().includes("mendix")) {
       tableSelector = "#mendix-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/mendix_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/mendix_ec_submit-feedback";
 
       // Cloud EC roles
     } else if (selectedRole.toLowerCase().includes("devops")) {
       tableSelector = "#devops-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/devops_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/devops_ec_submit-feedback";
     } else if (selectedRole.toLowerCase().includes("cloudops")) {
       tableSelector = "#cloudops-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/cloudops_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/cloudops_ec_submit-feedback";
     } else if (selectedRole.toLowerCase().includes("platform")) {
       tableSelector = "#platform-table-body tr";
-      apiEndpoint = "http://localhost:3001/api/platform_ec_submit-feedback";
+      apiEndpoint = "https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/platform_ec_submit-feedback";
     } else {
       alert("Selected role not supported.");
       return;

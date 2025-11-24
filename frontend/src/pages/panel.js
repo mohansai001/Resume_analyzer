@@ -70,7 +70,7 @@ const Panel = () => {
         const response = await fetch(
           // Fetch candidates for the selected date for panel login baesd on the login email and selected date
 
-          ` http://localhost:3001/api/panel-candidates-info?l_2_interviewdate=${formattedSelectedDate}&userEmail=${userEmail}`
+          ` https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/panel-candidates-info?l_2_interviewdate=${formattedSelectedDate}&userEmail=${userEmail}`
         );
         if (response.ok) {
           candidatesData = await response.json();
@@ -83,7 +83,7 @@ const Panel = () => {
       try {
         const feedbackResponse = await fetch(
           // Fetch feedback for the selected date for panel login based on the login email and selected date
-          ` http://localhost:3001/api/feedback-for-panel-member?interview_date=${formattedSelectedDate}&userEmail=${userEmail}`
+          ` https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/feedback-for-panel-member?interview_date=${formattedSelectedDate}&userEmail=${userEmail}`
         );
         if (feedbackResponse.ok) {
           const feedbacks = await feedbackResponse.json();
@@ -97,7 +97,7 @@ const Panel = () => {
       try {
         const feedbackTableResponse = await fetch(
           // Fetch feedback from all the existing feedback tables for the selected date and user email
-          ` http://localhost:3001/api/feedback-table?interview_date=${formattedSelectedDate}&userEmail=${userEmail}`
+          ` https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/feedback-table?interview_date=${formattedSelectedDate}&userEmail=${userEmail}`
         );
         if (feedbackTableResponse.ok) {
           const feedbackTableData = await feedbackTableResponse.json();
@@ -125,7 +125,7 @@ const Panel = () => {
   const openFeedbackForm = async (candidateEmail, recruitmentPhase) => {
     try {
       // based on the EC category and recruitment phase, it will open the feedback form in a new window
-      const response = await fetch(" http://localhost:3001/api/get-engcenter-select", {
+      const response = await fetch(" https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-engcenter-select", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

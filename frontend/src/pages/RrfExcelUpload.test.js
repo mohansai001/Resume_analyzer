@@ -94,7 +94,7 @@ describe('RrfExcelUpload Component', () => {
 
     const rrfIds = ['RRF001', 'RRF002', 'RRF003'];
     
-    const response = await fetch('http://localhost:3001/api/upload-rrf-excel', {
+    const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/upload-rrf-excel', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ rrfIds })
@@ -102,7 +102,7 @@ describe('RrfExcelUpload Component', () => {
 
     const result = await response.json();
 
-    expect(fetch).toHaveBeenCalledWith('http://localhost:3001/api/upload-rrf-excel', {
+    expect(fetch).toHaveBeenCalledWith('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/upload-rrf-excel', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ rrfIds })
@@ -122,7 +122,7 @@ describe('RrfExcelUpload Component', () => {
       json: async () => mockErrorResponse
     });
 
-    const response = await fetch('http://localhost:3001/api/upload-rrf-excel', {
+    const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/upload-rrf-excel', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ rrfIds: [] })
@@ -200,7 +200,7 @@ describe('RrfExcelUpload Component', () => {
     fetch.mockRejectedValueOnce(new Error('Network error'));
 
     try {
-      await fetch('http://localhost:3001/api/upload-rrf-excel', {
+      await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/upload-rrf-excel', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ rrfIds: ['RRF001'] })

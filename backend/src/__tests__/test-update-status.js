@@ -1,6 +1,6 @@
 // Using built-in fetch (available in Node.js 18+)
 
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = 'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api';
 
 async function testUpdateStatus() {
   console.log('🧪 Testing update-status endpoint...\n');
@@ -49,7 +49,7 @@ async function testUpdateStatus() {
 
     for (const route of routes) {
       try {
-        const response = await fetch(`http://localhost:3001${route}`);
+        const response = await fetch(`https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net${route}`);
         console.log(`   ${route}: ${response.status}`);
       } catch (error) {
         console.log(`   ${route}: Error - ${error.message}`);

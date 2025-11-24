@@ -57,13 +57,13 @@ const ProjectFitment = () => {
       setRoundDetails(roundDetailsParam);
 
       fetch(
-        `http://localhost:3001/api/get-feedbackform?candidateEmail=${candidateEmailParam}&roundDetails=${roundDetailsParam}`
+        `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-feedbackform?candidateEmail=${candidateEmailParam}&roundDetails=${roundDetailsParam}`
       )
         .then((response) => response.json())
         .then((data) => {
           if (data.error) {
             fetch(
-              `http://localhost:3001/api/getCandidateData?candidateEmail=${candidateEmailParam}`
+              `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/getCandidateData?candidateEmail=${candidateEmailParam}`
             )
               .then((response) => response.json())
               .then((candidateData) => {
@@ -269,7 +269,7 @@ const ProjectFitment = () => {
 
     try {
       const response = await fetch(
-        'http://localhost:3001/api/submitFeedback',
+        'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/submitFeedback',
         {
           method: 'POST',
           headers: {

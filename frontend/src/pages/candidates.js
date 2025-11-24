@@ -60,7 +60,7 @@ const Candidates = () => {
       }
 
       const response = await fetch(
-        `http://localhost:3001/api/get-next-round?rrf_id=${rrf_id}&recruitment_phase=${encodeURIComponent(
+        `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-next-round?rrf_id=${rrf_id}&recruitment_phase=${encodeURIComponent(
           recruitment_phase
         )}`
       );
@@ -93,7 +93,7 @@ const Candidates = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        'http://localhost:3001/api/get-shortlisted-candidates'
+        'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-shortlisted-candidates'
       );
       if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.statusText}`);
@@ -138,7 +138,7 @@ const Candidates = () => {
   const getCandidateEmailStatus = async (candidateEmail) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/api/get-email-status?candidate_email=${encodeURIComponent(
+        `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-email-status?candidate_email=${encodeURIComponent(
           candidateEmail
         )}`
       );
@@ -156,7 +156,7 @@ const Candidates = () => {
   const updateEmailStatus = async (candidateEmail, status) => {
     try {
       const response = await fetch(
-        'http://localhost:3001/api/update-email-status',
+        'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/update-email-status',
         {
           method: 'POST',
           headers: {
@@ -424,7 +424,7 @@ const Candidates = () => {
       });
 
       const statusUpdateResponse = await fetch(
-        'http://localhost:3001/api/update-status',
+        'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/update-status',
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -482,7 +482,7 @@ const Candidates = () => {
 
   const fetchPanelEmails = (domain) => {
     fetch(
-      `http://localhost:3001/api/get-panel-emails?domain=${domain}`
+      `https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/get-panel-emails?domain=${domain}`
     )
       .then((response) => response.json())
       .then((data) => {

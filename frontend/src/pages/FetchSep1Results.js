@@ -11,7 +11,7 @@ const FetchSep1Results = () => {
     setResults(null);
 
     try {
-      const response = await fetch('http://localhost:3001/api/fetch-and-save-results', {
+      const response = await fetch('https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net/api/fetch-and-save-results', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

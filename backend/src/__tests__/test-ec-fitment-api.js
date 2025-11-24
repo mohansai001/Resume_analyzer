@@ -1,7 +1,7 @@
 const fetch = require('node:fetch');
 
 async function testECFitmentAPI() {
-  const baseUrl = 'http://localhost:3001';
+  const baseUrl = 'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net';
   
   console.log('🧪 Testing EC Fitment API endpoints...\n');
   

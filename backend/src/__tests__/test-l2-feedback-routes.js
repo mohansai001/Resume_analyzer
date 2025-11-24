@@ -1,7 +1,7 @@
 const fetch = require('node:fetch');
 
 async function testL2FeedbackRoutes() {
-  const baseUrl = 'http://localhost:3001';
+  const baseUrl = 'https://resumeanalyzer-ggezh7b8b0b5cwat.canadacentral-01.azurewebsites.net';
   
   console.log('🧪 Testing L2 Technical Feedback Routes...\n');
   
